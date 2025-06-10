@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reality Check AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🧠 Reality Check AI</h1>
+    <button id="toggleTheme">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <main>
+    <textarea id="userInput" placeholder="Paste an article, idea, or YouTube link..." maxlength="1000"></textarea>
+    <div class="char-count"><span id="charCount">0</span>/1000 characters</div>
+
+    <div class="btn-group">
+      <button onclick="summarize()">📝 Summarize</button>
+      <button onclick="explainSimple()">👶 Explain Like I’m 5</button>
+      <button onclick="compareOpinions()">🗳️ Compare Opinions</button>
+      <button onclick="voiceInput()">🎤 Speak</button>
+      <button onclick="analyzeYouTube()">🎥 Analyze YouTube</button>
+      <button onclick="clearAll()">🧹 Clear All</button>
+    </div>
+
+    <div id="output" class="card output">Your result will appear here...</div>
+
+    <div id="opinions" class="card-container">
+      <div class="card" id="liberal"></div>
+      <div class="card" id="neutral"></div>
+      <div class="card" id="conservative"></div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+  </main>
+
+  <footer>
+    <p>🔍 Powered by Perplexity AI | Built by Rubinah Solomon</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
